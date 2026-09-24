@@ -14,6 +14,7 @@ export function toIso(dia: Date): string {
 }
 
 export class Livro {
+  comTitulo: any;
   constructor(
     readonly id: LivroId | null,
     readonly numeroRegistro: NumeroRegistro,
@@ -67,4 +68,15 @@ export class Livro {
   private static normalizar(titulo: string): string {
     return titulo.trim().toLowerCase();
   }
+}
+
+comTitulo(titulo: string): Livro {
+  return new Livro(
+    this.id,
+    this.numeroRegistro,
+    this.isbn,
+    titulo,
+    this.autorId,
+    this.dataCatalogacao,
+  );
 }
