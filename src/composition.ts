@@ -11,7 +11,6 @@ import { EventBus } from "./shared/EventBus";
 import { AutorId } from "./shared/identifiers";
 
 export type UseCases = {
-  corrigirTitulo: any;
   cadastrarLivro: CadastrarLivro;
   buscarLivro: BuscarLivro;
 };
